@@ -1,6 +1,8 @@
 #!/bin/bash
 SG_ID="sg-0cc876860cca2f416" # Replace with your security group id
 AMI_ID="ami-0220d79f3f480ecf5" # Replace with your AMI Id
+ZONE_ID="Z07775221LVNWUPIT7KYG"
+DOMAIN_NAME="srikanthdaggupati.com"
 
 
 for instance in $@
