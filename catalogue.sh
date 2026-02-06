@@ -70,4 +70,5 @@ VALIDATE $? "Starting and enabling Catalogue"
 cp $SCRIPT_DIR/mongo.repo /etc/yum.repos.d/mongo.repo
 dnf install mongodb-mongosh -y 
 
+mongosh --host $MONGODB_HOST --quiet --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
 mongosh --host $MONGODB_HOST </app/db/master-data.js
