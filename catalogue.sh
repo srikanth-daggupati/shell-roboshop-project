@@ -61,14 +61,7 @@ VALIDATE $? "Uzip catalogue code"
 npm install  &>>$LOGS_FILE
 VALIDATE $? "Installing dependencies"
 
-cp /home/ec2-user/shell-roboshop-project/catalogue.service /etc/systemd/system/catalogue.service
-VALIDATE $? "Created systemctl service"
-
-cp systemd/catalogue.service /etc/systemd/system/catalogue.service
-VALIDATE $? "Created systemctl service"
-
-
-cp $SCRIPT_DIR/catalogue.service /etc/systemd/system/catalogue.service
+cp $SCRIPT_DIR /catalogue.service /etc/systemd/system/catalogue.service
 VALIDATE $? "Created systemctl service"
 
 systemctl daemon-reload
