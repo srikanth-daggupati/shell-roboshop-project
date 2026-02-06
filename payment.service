@@ -1,0 +1,15 @@
+[Unit]
+Description=Payment Service
+
+[Service]
+User=root
+WorkingDirectory=/app
+// highlight-start
+Environment=CART_HOST=cart.srikanthdaggupati.com
+Environment=CART_PORT=8080
+Environment=USER_HOST=user.srikanthdaggupati.com
+Environment=USER_PORT=8080
+Environment=AMQP_HOST=rabbitmq.srikanthdaggupati.com
+// highlight-end
+Environment=AMQP_USER=roboshop
+Environment=AMQP_PASS=roboshop123
